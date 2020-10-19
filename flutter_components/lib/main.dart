@@ -25,7 +25,7 @@ class _ListDemoState extends State<ListDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Three-line list with theming'),
+        title: Text('Three Line List With Theming'),
       ),
       body: ListTileTheme(
         selectedColor: shrineBrown900,
@@ -119,9 +119,9 @@ const ColorScheme _shrineColorScheme = ColorScheme(
   brightness: Brightness.light,
 );
 
-const Color shrinePink50 = Color(0xFFFEEAE6);
+const Color shrinePink50 = Color(0x00FEEAE6);
 const Color shrinePink100 = Color(0xFFFEDBD0);
-const Color shrinePink300 = Color(0xFFFBB8AC);
+const Color shrinePink300 = Color(0x00FBB8AC);
 const Color shrinePink400 = Color(0xFAEAA4A4);
 
 const Color shrineBrown900 = Color(0xDF442B2D);
