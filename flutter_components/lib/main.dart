@@ -55,7 +55,10 @@ class _ListDemoState extends State<ListDemo> {
   }
 }
 
-ThemeData _buildShrineTheme() {
+
+
+ThemeData _buildShrineTheme() 
+{
   final ThemeData base = ThemeData.light();
   return base.copyWith(
     colorScheme: _shrineColorScheme,
@@ -70,7 +73,8 @@ ThemeData _buildShrineTheme() {
       colorScheme: _shrineColorScheme,
       textTheme: ButtonTextTheme.normal,
     ),
-    primaryIconTheme: _customIconTheme(base.iconTheme),
+    
+	primaryIconTheme: _customIconTheme(base.iconTheme),
     textTheme: _buildShrineTextTheme(base.textTheme),
     primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
     accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
@@ -82,7 +86,10 @@ IconThemeData _customIconTheme(IconThemeData original) {
   return original.copyWith(color: shrineBrown900);
 }
 
-TextTheme _buildShrineTextTheme(TextTheme base) {
+
+
+TextTheme _buildShrineTextTheme(TextTheme base) 
+{
   return base
       .copyWith(
     caption: base.caption.copyWith(
@@ -102,6 +109,8 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
     bodyColor: shrineBrown900,
   );
 }
+
+
 
 const ColorScheme _shrineColorScheme = ColorScheme(
   primary: shrinePink100,
