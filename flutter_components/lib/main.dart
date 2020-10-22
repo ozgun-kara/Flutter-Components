@@ -115,14 +115,14 @@ TextTheme _buildShrineTextTheme(TextTheme base)
 const ColorScheme _shrineColorScheme = ColorScheme(
   primary: shrinePink100,
   primaryVariant: shrineBrown900,
+  onPrimary: shrineBrown900,
+  onSecondary: shrineBrown900,
+  onSurface: shrineBrown900, 
   secondary: shrinePink50,
   secondaryVariant: shrineBrown900,
   surface: shrineSurfaceWhite,
   background: shrineBackgroundWhite,
   error: shrineErrorRed,
-  onPrimary: shrineBrown900,
-  onSecondary: shrineBrown900,
-  onSurface: shrineBrown900,
   onBackground: shrineBrown900,
   onError: shrineSurfaceWhite,
   brightness: Brightness.light,
@@ -130,12 +130,10 @@ const ColorScheme _shrineColorScheme = ColorScheme(
 
 const Color shrinePink50 = Color(0x00FEEAE6);
 const Color shrinePink100 = Color(0xFFFEDBD0);
-const Color shrinePink300 = Color(0x00FBB8AC);
-const Color shrinePink400 = Color(0xFAEAA4A4);
-
 const Color shrineBrown900 = Color(0xDF442B2D);
 const Color shrineBrown600 = Color(0xFF7D4F52);
-
+const Color shrinePink300 = Color(0x00FBB8AC);
+const Color shrinePink400 = Color(0xFAEAA4A4);
 const Color shrineErrorRed = Color(0xFFC5032B);
 
 const Color shrineSurfaceWhite = Color(0xFFFFFBFA);
