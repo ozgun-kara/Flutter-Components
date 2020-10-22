@@ -82,10 +82,10 @@ ThemeData _buildShrineTheme()
   );
 }
 
-IconThemeData _customIconTheme(IconThemeData original) {
+IconThemeData _customIconTheme(IconThemeData original) 
+{
   return original.copyWith(color: shrineBrown900);
 }
-
 
 
 TextTheme _buildShrineTextTheme(TextTheme base) 
@@ -111,7 +111,6 @@ TextTheme _buildShrineTextTheme(TextTheme base)
 }
 
 
-
 const ColorScheme _shrineColorScheme = ColorScheme(
   primary: shrinePink100,
   primaryVariant: shrineBrown900,
@@ -135,8 +134,6 @@ const Color shrineBrown600 = Color(0xFF7D4F52);
 const Color shrinePink300 = Color(0x00FBB8AC);
 const Color shrinePink400 = Color(0xFAEAA4A4);
 const Color shrineErrorRed = Color(0xFFC5032B);
-
 const Color shrineSurfaceWhite = Color(0xFFFFFBFA);
 const Color shrineBackgroundWhite = Colors.white;
-
 const defaultLetterSpacing = 0.03;
