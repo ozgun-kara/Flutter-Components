@@ -112,8 +112,8 @@ TextTheme _buildShrineTextTheme(TextTheme base)
   );
 }
 
-
-const ColorScheme _shrineColorScheme = ColorScheme(
+const ColorScheme _shrineColorScheme = ColorScheme
+(
   primary: shrinePink100,
   primaryVariant: shrineBrown900,
   onPrimary: shrineBrown900,
