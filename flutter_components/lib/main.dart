@@ -13,12 +13,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ListDemo extends StatefulWidget {
+class ListDemo extends StatefulWidget 
+{
   @override
   _ListDemoState createState() => _ListDemoState();
 }
 
-class _ListDemoState extends State<ListDemo> {
+class _ListDemoState extends State<ListDemo> 
+{
+
   Map<int, bool> countToValue = <int, bool>{};
 
   @override
@@ -54,7 +57,6 @@ class _ListDemoState extends State<ListDemo> {
     );
   }
 }
-
 
 
 ThemeData _buildShrineTheme() 
