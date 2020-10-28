@@ -143,7 +143,6 @@ ThemeData _buildShrineTheme() {
   );
 }
 
-
 TextTheme _buildShrineTextTheme(TextTheme base) {
   return base
       .copyWith(
@@ -151,6 +150,7 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
       fontWeight: FontWeight.w500,
       letterSpacing: defaultLetterSpacing,
     ),
+	
     title: base.title.copyWith(
       fontSize: 18,
       letterSpacing: defaultLetterSpacing,
