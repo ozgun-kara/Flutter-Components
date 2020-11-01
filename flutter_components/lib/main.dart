@@ -164,6 +164,7 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
       fontSize: 16,
       letterSpacing: defaultLetterSpacing,
     ),
+	
     body1: base.body1.copyWith(
       letterSpacing: defaultLetterSpacing,
     ),
@@ -173,6 +174,7 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
     display1: base.display1.copyWith(
       letterSpacing: defaultLetterSpacing,
     ),
+	
     button: base.button.copyWith(
       fontWeight: FontWeight.w500,
       fontSize: 14,
