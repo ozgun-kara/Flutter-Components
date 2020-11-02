@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return new MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: _buildShrineTheme(),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new MyHomePage(title: 'Users'),
     );
   }
 }
@@ -20,199 +24,115 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomePageState createState() => new _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Widget build(BuildContext context) 
-  {
-    return Scaffold(
-      body: ListView(
-        children: [
-            Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: Icon(Icons.arrow_drop_down_circle),
-                    title: const Text('Card title 1'),
-                    subtitle: Text(
-                      'Secondary Text',
-                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
+  Future<List<User>> _getUsers() async {
+    var data = await http
+        .get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
+
+    var jsonData = json.decode(data.body);
+
+    List<User> users = [];
+
+    // Sample data Reproduction
+    for (var u in jsonData) {
+      User user =
+          User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
+
+      for (int i = 0; i < 50; i++) {
+        users.add(user);
+      }
+    }
+
+    return users;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text(widget.title),
+      ),
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            child: FutureBuilder(
+              future: _getUsers(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                print(snapshot.data);
+                if (snapshot.data == null) {
+                  // return Container(child: Center(child: Text("Loading...")));
+                  return Container(
+                      child: Center(
+                          child: CircularProgressIndicator(
+                              backgroundColor: Colors.white,
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                  Colors.lightBlue))));
+                } else {
+                  return ListView.separated(
+                    itemCount: snapshot.data.length,
+                    separatorBuilder: (BuildContext context, int index) =>
+                        Divider(
+                      thickness: 3,
+                      color: Colors.black,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
-                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                    ),
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.start,
-                    children: [
-                      FlatButton(
-                        onPressed: () {
-                          // Perform some action
+                    itemBuilder: (BuildContext context, int index) {
+                      return ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              NetworkImage(snapshot.data[index].picture),
+                        ),
+                        title: Text(snapshot.data[index].name),
+                        subtitle: Text(snapshot.data[index].email),
+                        trailing: Text('${index + 1}',
+                            style: TextStyle(
+                                fontFamily: 'BlackOpsOne',
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500)),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (context) =>
+                                      DetailPage(snapshot.data[index])));
                         },
-                        child: const Text('ACTION 1'),
-                      ),
-                      FlatButton(
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('ACTION 2'),
-                      ),
-                    ],
-                  ),
-                  Image.asset('assets/card-sample-image.jpg'),
-                ],
-              ),
+                      );
+                    },
+                  );
+                }
+              },
             ),
-            Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: Icon(Icons.arrow_drop_down_circle),
-                    title: const Text('Card title 1'),
-                    subtitle: Text(
-                      'Secondary Text',
-                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
-                      style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                    ),
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.start,
-                    children: [
-                      FlatButton(
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('ACTION 1'),
-                      ),
-                      FlatButton(
-                        onPressed: () {
-                          // Perform some action
-                        },
-                        child: const Text('ACTION 2'),
-                      ),
-                    ],
-                  ),
-                  Image.asset('assets/card-sample-image-2.jpg'),
-                ],
-              ),
-            ),
-        ],
+          ),
+        ),
       ),
     );
   }
 }
 
-IconThemeData _customIconTheme(IconThemeData original) {
-  return original.copyWith(color: shrineBrown900);
+class DetailPage extends StatelessWidget {
+  final User user;
+
+  DetailPage(this.user);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+      title: Text(user.name),
+    ));
+  }
 }
 
-ThemeData _buildShrineTheme() {
-  final ThemeData base = ThemeData.light();
-  return base.copyWith(
-    colorScheme: _shrineColorScheme,
-    accentColor: shrineBrown900,
-    primaryColor: shrinePink100,
-    buttonColor: shrinePink100,
-    scaffoldBackgroundColor: shrineBackgroundWhite,
-    cardColor: shrineBackgroundWhite,
-    textSelectionColor: shrinePink100,
-    errorColor: shrineErrorRed,
-    buttonTheme: const ButtonThemeData(
-      colorScheme: _shrineColorScheme,
-      textTheme: ButtonTextTheme.normal,
-    ),
-    primaryIconTheme: _customIconTheme(base.iconTheme),
-    textTheme: _buildShrineTextTheme(base.textTheme),
-    primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
-    accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
-    iconTheme: _customIconTheme(base.iconTheme),
-  );
+class User {
+  final int index;
+  final String about;
+  final String name;
+  final String email;
+  final String picture;
+
+  User(this.index, this.about, this.name, this.email, this.picture);
 }
-
-TextTheme _buildShrineTextTheme(TextTheme base) {
-  return base
-      .copyWith(
-    headline: base.headline.copyWith(
-      fontWeight: FontWeight.w500,
-      letterSpacing: defaultLetterSpacing,
-    ),
-	
-    title: base.title.copyWith(
-      fontSize: 18,
-      letterSpacing: defaultLetterSpacing,
-    ),
-    caption: base.caption.copyWith(
-      fontWeight: FontWeight.w400,
-      fontSize: 14,
-      letterSpacing: defaultLetterSpacing,
-    ),
-    body2: base.body2.copyWith(
-      fontWeight: FontWeight.w500,
-      fontSize: 16,
-      letterSpacing: defaultLetterSpacing,
-    ),
-	
-    body1: base.body1.copyWith(
-      letterSpacing: defaultLetterSpacing,
-    ),
-    subhead: base.subhead.copyWith(
-      letterSpacing: defaultLetterSpacing,
-    ),
-    display1: base.display1.copyWith(
-      letterSpacing: defaultLetterSpacing,
-    ),
-	
-    button: base.button.copyWith(
-      fontWeight: FontWeight.w500,
-      fontSize: 14,
-      letterSpacing: defaultLetterSpacing,
-    ),
-  )
-      .apply(
-    fontFamily: 'Rubik',
-    displayColor: shrineBrown900,
-    bodyColor: shrineBrown900,
-  );
-}
-
-const ColorScheme _shrineColorScheme = ColorScheme(
-  primary: shrinePink100,
-  primaryVariant: shrineBrown900,
-  secondary: shrinePink50,
-  secondaryVariant: shrineBrown900,
-  surface: shrineSurfaceWhite,
-  background: shrineBackgroundWhite,
-  error: shrineErrorRed,
-  onPrimary: shrineBrown900,
-  onSecondary: shrineBrown900,
-  onSurface: shrineBrown900,
-  onBackground: shrineBrown900,
-  onError: shrineSurfaceWhite,
-  brightness: Brightness.light,
-);
-
-const Color shrinePink50 = Color(0xFFFEEAE6);
-const Color shrinePink100 = Color(0xFFFEDBD0);
-const Color shrinePink300 = Color(0xFFFBB8AC);
-const Color shrinePink400 = Color(0xFFEAA4A4);
-const Color shrineBrown900 = Color(0xFF442B2D);
-const Color shrineBrown600 = Color(0xFF7D4F52);
-
-const Color shrineErrorRed = Color(0xFFC5032B);
-
-const Color shrineSurfaceWhite = Color(0xFFFFFBFA);
-const Color shrineBackgroundWhite = Colors.white;
-const defaultLetterSpacing = 0.03;
