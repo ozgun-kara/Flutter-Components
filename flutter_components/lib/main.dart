@@ -113,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+
 class DetailPage extends StatelessWidget {
   final User user;
 
@@ -128,6 +129,7 @@ class DetailPage extends StatelessWidget {
 }
 
 class User {
+
   final int index;
   final String about;
   final String name;
