@@ -113,7 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatelessWidget 
+{
   final User user;
 
   DetailPage(this.user);
