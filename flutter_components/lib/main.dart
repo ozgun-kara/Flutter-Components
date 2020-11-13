@@ -73,7 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               strokeWidth: 2,
                               valueColor: AlwaysStoppedAnimation<Color>(
                                   Colors.lightBlue))));
-                } else {
+                } else 
+				{
                   return ListView.separated(
                     itemCount: snapshot.data.length,
                     separatorBuilder: (BuildContext context, int index) =>
@@ -122,7 +123,8 @@ class DetailPage extends StatelessWidget
   DetailPage(this.user);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return Scaffold(
         appBar: AppBar(
       title: Text(user.name),
