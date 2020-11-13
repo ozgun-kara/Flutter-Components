@@ -5,7 +5,8 @@ import 'dart:convert';
 
 void main() => runApp(new MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget 
+{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget 
+{
   MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
