@@ -95,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage>
                           backgroundImage:
                               NetworkImage(snapshot.data[index].picture),
                         ),
+						
                         title: Text(snapshot.data[index].name),
                         subtitle: Text(snapshot.data[index].email),
                         trailing: Text('${index + 1}',
