@@ -56,17 +56,20 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
+	  
       body: SafeArea(
         child: Center(
           child: Container(
             child: FutureBuilder(
               future: _getUsers(),
-              builder: (BuildContext context, AsyncSnapshot snapshot) {
+              builder: (BuildContext context, AsyncSnapshot snapshot) 
+			  {
                 print(snapshot.data);
                 if (snapshot.data == null) {
                   // return Container(child: Center(child: Text("Loading...")));
