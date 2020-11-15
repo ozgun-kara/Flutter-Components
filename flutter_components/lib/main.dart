@@ -8,7 +8,8 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget 
 { 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
@@ -30,8 +31,10 @@ class MyHomePage extends StatefulWidget
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  Future<List<User>> _getUsers() async {
+class _MyHomePageState extends State<MyHomePage> 
+{
+  Future<List<User>> _getUsers() async 
+  {
     var data = await http
         .get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
 
