@@ -140,8 +140,8 @@ class DetailPage extends StatelessWidget
   }
 }
 
-class User {
-
+class User 
+{
   final int index;
   final String about;
   final String name;
