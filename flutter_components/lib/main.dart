@@ -140,6 +140,7 @@ class DetailPage extends StatelessWidget
   }
 }
 
+
 class User 
 {
   final int index;
