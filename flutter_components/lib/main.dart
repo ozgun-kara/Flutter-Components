@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> 
 {
   Future<List<User>> _getUsers() async 
