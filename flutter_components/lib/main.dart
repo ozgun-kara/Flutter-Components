@@ -146,6 +146,5 @@ class User
   final String picture;
   final int index;
 
-
   User(this.index, this.about, this.name, this.email, this.picture);
 }
