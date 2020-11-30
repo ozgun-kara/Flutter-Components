@@ -29,7 +29,6 @@ class MyHomePage extends StatefulWidget
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> 
 {
   Future<List<User>> _getUsers() async 
@@ -37,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage>
     var data = await http
         .get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
 
-
+    var jsonData = json.decode(data.body);
 
     List<User> users = [];
 
