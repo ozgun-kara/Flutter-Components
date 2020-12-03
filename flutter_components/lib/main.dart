@@ -49,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage>
         users.add(user);
       }
 
-
     }
     return users;
   }
