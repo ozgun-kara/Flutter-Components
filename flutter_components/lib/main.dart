@@ -48,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage>
 	  for (int i = 0; i < 50; i++) {
         users.add(user);
       }
-
     }
     return users;
   }
