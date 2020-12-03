@@ -45,13 +45,10 @@ class _MyHomePageState extends State<MyHomePage>
       User user =
           User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
 
-      for (int i = 0; i < 50; i++) {
-        users.add(user);
-      }
+
     }
     return users;
   }
-
 
   @override
   Widget build(BuildContext context) 
