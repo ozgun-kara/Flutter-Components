@@ -22,8 +22,6 @@ class MyApp extends StatelessWidget
 
 
 
-
-
 class _MyHomePageState extends State<MyHomePage> 
 {
   Future<List<User>> _getUsers() async 
