@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget
   }
 }
 
-
 class MyHomePage extends StatefulWidget 
 {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -30,8 +29,6 @@ class MyHomePage extends StatefulWidget
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
-
-
 
 class _MyHomePageState extends State<MyHomePage> 
 {
