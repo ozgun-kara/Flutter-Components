@@ -40,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage>
 
     List<User> users = [];
 
-
     // Sample data Reproduction
     for (var u in jsonData) {
       User user =
