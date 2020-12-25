@@ -38,7 +38,6 @@ class _MyHomePageState extends State<MyHomePage>
 
     var jsonData = json.decode(data.body);
 
-
     List<User> users = [];
 
 
