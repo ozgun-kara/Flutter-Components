@@ -77,7 +77,11 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
  
- 
+  fonts:
+    - family: BlackOpsOne
+      fonts:
+        - asset: fonts/BlackOpsOne-Regular.ttf
+          weight: 400 
  
 
   #
