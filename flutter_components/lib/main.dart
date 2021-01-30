@@ -139,8 +139,6 @@ class DetailPage extends StatelessWidget
       title: Text(user.name),
     ));
   }
-
-  
 }
 
 
