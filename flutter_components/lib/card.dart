@@ -75,6 +75,9 @@ class ExpansionCard extends StatefulWidget {
   _ExpansionTileState createState() => _ExpansionTileState();
 }
 
+
+
+
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
   static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
@@ -85,7 +88,10 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-  AnimationController _controller;
+
+  bool _isExpanded = false;
+  
+    AnimationController _controller;
   Animation<double> _iconTurns;
   Animation<double> _heightFactor;
   Animation<Color> _borderColor;
@@ -93,7 +99,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   Animation<Color> _iconColor;
   Animation<Color> _backgroundColor;
 
-  bool _isExpanded = false;
 
   @override
   void initState() {
