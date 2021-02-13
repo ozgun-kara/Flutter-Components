@@ -19,7 +19,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   cupertino_icons: ^1.0.0
     
- 
   dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -44,9 +43,6 @@ flutter:
   # https://flutter.dev/assets-and-images/#resolution-aware.
   
   
-  
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
 
 
 
