@@ -70,8 +70,6 @@ class ExpansionCard extends StatefulWidget {
 }
 
 
-
-
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
   static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
