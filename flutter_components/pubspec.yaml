@@ -10,7 +10,6 @@ https://developer.apple.com/library/archive/documentation/General/Reference/Info
 version: 1.0.0+1
 
 
-
 environment:
   sdk: ">=2.7.0 <3.0.0"
   
@@ -31,8 +30,6 @@ dependencies:
 # The following section is specific to Flutter.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
