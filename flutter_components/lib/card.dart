@@ -48,10 +48,7 @@ class ExpansionCard extends StatefulWidget {
   /// the value false.
   final ValueChanged<bool> onExpansionChanged;
 
-  /// The widgets that are displayed when the tile expands.
-  ///
-  /// Typically [ListTile] widgets.
-  final List<Widget> children;
+
 
   /// The color to display behind the sublist when expanded.
   final Color backgroundColor;
