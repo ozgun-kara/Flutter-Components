@@ -52,6 +52,11 @@ class ExpansionCard extends StatefulWidget {
   /// The color to display behind the sublist when expanded.
   final Color backgroundColor;
 
+  /// The widgets that are displayed when the tile expands.
+  ///
+  /// Typically [ListTile] widgets.
+  final List<Widget> children;
+
 
 
   /// A widget to display instead of a rotating arrow icon.
