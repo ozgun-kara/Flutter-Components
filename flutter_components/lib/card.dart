@@ -49,9 +49,10 @@ class ExpansionCard extends StatefulWidget {
   final ValueChanged<bool> onExpansionChanged;
 
 
-
   /// The color to display behind the sublist when expanded.
   final Color backgroundColor;
+
+
 
   /// A widget to display instead of a rotating arrow icon.
   final Widget trailing;
