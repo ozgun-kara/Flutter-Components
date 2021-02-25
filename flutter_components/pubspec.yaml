@@ -55,11 +55,6 @@ flutter:
   # example:
  
  
-  fonts:
-    - family: BlackOpsOne
-      fonts:
-        - asset: fonts/BlackOpsOne-Regular.ttf
-          weight: 400 
 
 
   #
