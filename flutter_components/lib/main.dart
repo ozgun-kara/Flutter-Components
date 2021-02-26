@@ -150,6 +150,10 @@ class User
   final String email;
   final String picture;
   final int index;
+  
+  
+   final User user;
+  DetailPage(this.user);
 
   
   User(this.index, this.about, this.name, this.email, this.picture);
