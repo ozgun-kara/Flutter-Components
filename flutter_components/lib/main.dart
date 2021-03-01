@@ -127,8 +127,10 @@ class _MyHomePageState extends State<MyHomePage>
   }
 }
 
+
 class DetailPage extends StatelessWidget 
 {
+    // Sample data Reproduction
   final User user;
   DetailPage(this.user);
   @override
@@ -144,7 +146,6 @@ class DetailPage extends StatelessWidget
 
 class User 
 {
-
   final String about;
   final String name;
   final String email;
