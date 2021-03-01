@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> 
 {
   Future<List<User>> _getUsers() async 
@@ -44,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage>
     List<User> users = [];
 
     // Sample data Reproduction
+	
     for (var u in jsonData) {
       User user =
           User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
