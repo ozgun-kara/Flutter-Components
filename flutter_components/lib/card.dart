@@ -162,6 +162,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
             bottom: BorderSide(color: borderSideColor),
           ),
         ),
+		
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
