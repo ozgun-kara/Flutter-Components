@@ -87,15 +87,13 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   bool _isExpanded = false;
   
     AnimationController _controller;
-  Animation<double> _iconTurns;
-  Animation<double> _heightFactor;
-  Animation<Color> _borderColor;
-  Animation<Color> _headerColor;
-  Animation<Color> _iconColor;
-  Animation<Color> _backgroundColor;
+    Animation<double> _iconTurns;
+    Animation<Color> _headerColor;
+    Animation<Color> _iconColor;
+    Animation<Color> _backgroundColor;
 
-
-
+    Animation<double> _heightFactor;
+    Animation<Color> _borderColor;
 
   @override
   void initState() {
@@ -138,6 +136,8 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     if (widget.onExpansionChanged != null)
       widget.onExpansionChanged(_isExpanded);
   }
+
+
 
   Widget _buildChildren(BuildContext context, Widget child) {
     final Color borderSideColor =Colors.transparent;// _borderColor.value ??
