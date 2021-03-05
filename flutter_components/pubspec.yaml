@@ -9,6 +9,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+
+
 environment:
   sdk: ">=2.7.0 <3.0.0"
   
@@ -22,6 +24,8 @@ dependencies:
   dev_dependencies:
   flutter_test:
     sdk: flutter
+    
+    
     
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
