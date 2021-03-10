@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
-/// A single-line [ListTile] with a trailing button that expands or collapses
-/// the tile to reveal or hide the [children].
+
 ///
 
 ///
