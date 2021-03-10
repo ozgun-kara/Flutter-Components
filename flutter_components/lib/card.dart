@@ -26,6 +26,8 @@ class ExpansionCard extends StatefulWidget {
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
+
+
   final String gif;
   /// A widget to display before the title.
   ///
@@ -52,7 +54,6 @@ class ExpansionCard extends StatefulWidget {
   ///
   /// Typically [ListTile] widgets.
   final List<Widget> children;
-
 
 
   /// A widget to display instead of a rotating arrow icon.
