@@ -26,8 +26,6 @@ class ExpansionCard extends StatefulWidget {
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
-
-
   final String gif;
   /// A widget to display before the title.
   ///
