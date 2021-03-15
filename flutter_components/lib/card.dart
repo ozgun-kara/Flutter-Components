@@ -49,7 +49,6 @@ class ExpansionCard extends StatefulWidget {
   /// Typically [ListTile] widgets.
   final List<Widget> children;
 
-
   /// A widget to display instead of a rotating arrow icon.
   final Widget trailing;
 
@@ -62,7 +61,6 @@ class ExpansionCard extends StatefulWidget {
   @override
   _ExpansionTileState createState() => _ExpansionTileState();
 }
-
 
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
