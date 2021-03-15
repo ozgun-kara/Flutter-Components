@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
-///
-///  * [ListTile], useful for creating expansion tile [children] when the
-///    expansion tile represents a sublist.
-///  * The "Expand/collapse" section of
 ///    <https://material.io/guidelines/components/lists-controls.html>.
 class ExpansionCard extends StatefulWidget {
   /// Creates a single-line [ListTile] with a trailing button that expands or collapses
