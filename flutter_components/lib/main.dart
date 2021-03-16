@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 void main() => runApp(new MyApp());
 
 
-
 class MyApp extends StatelessWidget 
 { 
   @override
@@ -26,7 +25,6 @@ class MyHomePage extends StatefulWidget
 {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
-
 
 
   @override
