@@ -63,6 +63,8 @@ class ExpansionCard extends StatefulWidget {
   /// Color of the title bar and icon in the expanded state.
   final Color color;
 
+
+
   @override
   _ExpansionTileState createState() => _ExpansionTileState();
 }
