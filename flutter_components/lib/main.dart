@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget 
@@ -44,8 +43,6 @@ class _MyHomePageState extends State<MyHomePage>
     var jsonData = json.decode(data.body);
 
     List<User> users = [];
-
-    // Sample data Reproduction
 	
     for (var u in jsonData) {
       User user =
