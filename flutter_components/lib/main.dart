@@ -55,14 +55,13 @@ class _MyHomePageState extends State<MyHomePage>
       }
     }
 	
-
-	
     return users;
   }
 
   @override
   Widget build(BuildContext context) 
   {
+  
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
