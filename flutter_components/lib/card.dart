@@ -77,6 +77,8 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   
     AnimationController _controller;
     Animation<double> _iconTurns;
+	Animation<double> _heightFactor;
+    Animation<Color> _borderColor;
     Animation<Color> _headerColor;
     Animation<Color> _iconColor;
     Animation<Color> _backgroundColor;
