@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
-
-
 ///    <https://material.io/guidelines/components/lists-controls.html>.
 class ExpansionCard extends StatefulWidget {
   /// Creates a single-line [ListTile] with a trailing button that expands or collapses
@@ -38,7 +36,6 @@ class ExpansionCard extends StatefulWidget {
   final Widget leading;
 
   /// Called when the tile expands or collapses.
-  ///
   /// When the tile starts expanding, this function is called with the value
   /// true. When the tile starts collapsing, this function is called with
   /// the value false.
@@ -49,7 +46,6 @@ class ExpansionCard extends StatefulWidget {
   final Color backgroundColor;
 
   /// The widgets that are displayed when the tile expands.
-  ///
   /// Typically [ListTile] widgets.
   final List<Widget> children;
 
