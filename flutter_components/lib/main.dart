@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget
   }
 }
 
-
-
 class MyHomePage extends StatefulWidget 
 {
 
@@ -38,8 +36,7 @@ class _MyHomePageState extends State<MyHomePage>
 {
   Future<List<User>> _getUsers() async 
   {
-    var data = await http
-        .get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
+    var data = await http.get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
 
     var jsonData = json.decode(data.body);
 
@@ -132,6 +129,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 }
 
+
 class DetailPage extends StatelessWidget 
 {
   final User user;
@@ -149,7 +147,6 @@ class DetailPage extends StatelessWidget
 
 class User 
 {
-
   final String about;
   final String name;
   final int index;
