@@ -41,7 +41,6 @@ class ExpansionCard extends StatefulWidget {
   /// the value false.
   final ValueChanged<bool> onExpansionChanged;
 
-
   /// The color to display behind the sublist when expanded.
   final Color backgroundColor;
 
@@ -57,7 +56,6 @@ class ExpansionCard extends StatefulWidget {
   
   /// Color of the title bar and icon in the expanded state.
   final Color color;
-
 
   @override
   _ExpansionTileState createState() => _ExpansionTileState();
@@ -105,6 +103,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     _controller.dispose();
     super.dispose();
   }
+
 
   void _handleTap() {
     setState(() {
