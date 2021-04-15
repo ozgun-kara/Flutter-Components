@@ -125,8 +125,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       widget.onExpansionChanged(_isExpanded);
   }
 
-
-
   Widget _buildChildren(BuildContext context, Widget child) {
     final Color borderSideColor =Colors.transparent;// _borderColor.value ??
 
@@ -142,7 +140,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
         ),
       ),
       Container(
-        
 		decoration: BoxDecoration(
           color: _backgroundColor.value ?? Colors.transparent,
           border: Border(
