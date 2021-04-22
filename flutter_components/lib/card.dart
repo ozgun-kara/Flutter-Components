@@ -10,6 +10,7 @@ class ExpansionCard extends StatefulWidget {
   /// be non-null.
 
  const ExpansionCard({
+ 
     Key key,
     this.leading,
     @required this.title,
@@ -27,7 +28,6 @@ class ExpansionCard extends StatefulWidget {
   ///
   /// Typically a [Text] widget.
   final Widget title;
-  
   
     final String gif;
   /// A widget to display before the title.
