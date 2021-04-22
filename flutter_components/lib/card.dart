@@ -81,7 +81,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     Animation<Color> _iconColor;
     Animation<Color> _backgroundColor;
 
-
   @override
   void initState() {
     super.initState();
@@ -103,7 +102,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     _controller.dispose();
     super.dispose();
   }
-
 
   void _handleTap() {
     setState(() {
@@ -147,6 +145,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
             bottom: BorderSide(color: borderSideColor),
           ),
         ),
+
 		
         child: Column(
           mainAxisSize: MainAxisSize.min,
