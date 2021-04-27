@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'dart:async';
 
 void main() => runApp(new MyApp());
 
@@ -20,12 +18,6 @@ class MyApp extends StatelessWidget
   }
 }
 
-  @override
-  Widget build(BuildContext context) 
-  {
-
-  }
-}
 
 
 class MyHomePage extends StatefulWidget 
