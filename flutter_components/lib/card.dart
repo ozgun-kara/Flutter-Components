@@ -21,14 +21,15 @@ class ExpansionCard extends StatefulWidget {
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
-  /// The primary content of the list item.
+
+
+
+
+    final String gif;
+  /// A widget to display before the title.
   ///
-  /// Typically a [Text] widget.
-  final Widget title;
-  
-
-
-
+  /// Typically a [CircleAvatar] widget.
+  final Widget leading;
 
 
 
