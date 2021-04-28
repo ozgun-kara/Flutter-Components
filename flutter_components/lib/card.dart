@@ -21,16 +21,16 @@ class ExpansionCard extends StatefulWidget {
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
-
-
-
-
+  /// The primary content of the list item.
+  ///
+  /// Typically a [Text] widget.
+  final Widget title;
+  
     final String gif;
   /// A widget to display before the title.
   ///
   /// Typically a [CircleAvatar] widget.
   final Widget leading;
-
 
 
   /// Called when the tile expands or collapses.
@@ -71,13 +71,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
   bool _isExpanded = false;
   
-    AnimationController _controller;
-    Animation<double> _iconTurns;
-	Animation<double> _heightFactor;
-    Animation<Color> _borderColor;
-    Animation<Color> _headerColor;
-    Animation<Color> _iconColor;
-    Animation<Color> _backgroundColor;
+
 
   @override
   void initState() {
