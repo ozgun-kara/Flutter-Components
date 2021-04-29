@@ -7,7 +7,17 @@ void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget 
 { 
-
+  @override
+  Widget build(BuildContext context) 
+  {
+	return new MaterialApp(
+      title: 'Flutter Demo',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new MyHomePage(title: 'Users'),
+    );
+  }
 }
 
 class MyHomePage extends StatefulWidget 
@@ -19,7 +29,6 @@ class MyHomePage extends StatefulWidget
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
-
 
 class _MyHomePageState extends State<MyHomePage> 
 {
@@ -43,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage>
 	
     return users;
   }
+
 
   @override
   Widget build(BuildContext context) 
@@ -115,7 +125,6 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 }
-
 
 class DetailPage extends StatelessWidget 
 {
