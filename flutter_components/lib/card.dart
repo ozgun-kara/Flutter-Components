@@ -8,16 +8,10 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
  
-    Key key,
-    this.leading,
-    @required this.title,
-    this.gif,
-    this.backgroundColor,
-    this.onExpansionChanged,
-    this.children = const <Widget>[],
-    this.trailing,
-    this.initiallyExpanded = false,
-    this.color,
+
+
+
+
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
