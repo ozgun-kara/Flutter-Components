@@ -26,7 +26,6 @@ class ExpansionCard extends StatefulWidget {
   /// Typically a [CircleAvatar] widget.
   final Widget leading;
 
-
   /// Called when the tile expands or collapses.
   /// When the tile starts expanding, this function is called with the value
   /// true. When the tile starts collapsing, this function is called with
@@ -62,7 +61,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _headerColorTween = ColorTween();
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
-
 
     AnimationController _controller;
     Animation<double> _iconTurns;
