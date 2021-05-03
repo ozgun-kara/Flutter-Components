@@ -7,7 +7,6 @@ const Duration _kExpand = Duration(milliseconds: 200);
 class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
- 
     Key key,
     this.leading,
     @required this.title,
@@ -63,7 +62,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
   static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
   static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
-
   final ColorTween _borderColorTween = ColorTween();
   final ColorTween _headerColorTween = ColorTween();
   final ColorTween _iconColorTween = ColorTween();
@@ -72,10 +70,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     AnimationController _controller;
     Animation<double> _iconTurns;
 	Animation<double> _heightFactor;
-    Animation<Color> _borderColor;
-    Animation<Color> _headerColor;
-    Animation<Color> _iconColor;
-    Animation<Color> _backgroundColor;
+
 
 
 	bool _isExpanded = false;
