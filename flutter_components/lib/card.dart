@@ -83,7 +83,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     _controller = AnimationController(duration: _kExpand, vsync: this);
     _heightFactor = _controller.drive(_easeInTween);
     _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
-    
 	_borderColor = _controller.drive(_borderColorTween.chain(_easeOutTween));
     _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
     _iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
@@ -192,7 +191,8 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     final bool closed = !_isExpanded && _controller.isDismissed;
-    return AnimatedBuilder(
+    
+	return AnimatedBuilder(
       animation: _controller.view,
       builder: _buildChildren,
       child: closed ? null : Column(children: widget.children),
