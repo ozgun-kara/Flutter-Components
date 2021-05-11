@@ -20,8 +20,6 @@ class MyApp extends StatelessWidget
   }
 }
 
-
-
 class MyHomePage extends StatefulWidget 
 {
 
@@ -31,6 +29,7 @@ class MyHomePage extends StatefulWidget
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
+
 
 class _MyHomePageState extends State<MyHomePage> 
 {
@@ -54,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage>
 	
     return users;
   }
-
 
   @override
   Widget build(BuildContext context) 
@@ -132,6 +130,7 @@ class DetailPage extends StatelessWidget
 {
   final User user;
   DetailPage(this.user);
+
   
   @override
   Widget build(BuildContext context) 
