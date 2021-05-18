@@ -8,6 +8,11 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
 
+    Key key,
+    this.leading,
+    @required this.title,
+    this.gif,
+    this.backgroundColor,
 
 
 
