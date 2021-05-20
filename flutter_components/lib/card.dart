@@ -9,6 +9,11 @@ class ExpansionCard extends StatefulWidget {
  const ExpansionCard({
 
 
+    this.initiallyExpanded = false,
+	this.onExpansionChanged,
+    this.children = const <Widget>[],
+    this.trailing,
+    this.color,
 
 
   }) : assert(initiallyExpanded != null),
