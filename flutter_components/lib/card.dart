@@ -81,7 +81,14 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   @override
   void initState() {
 
-
+    super.initState();
+    _controller = AnimationController(duration: _kExpand, vsync: this);
+    _heightFactor = _controller.drive(_easeInTween);
+    _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
+	_borderColor = _controller.drive(_borderColorTween.chain(_easeOutTween));
+    _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
+    _iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
+    _backgroundColor = _controller.drive(_backgroundColorTween.chain(_easeOutTween));
 
 
 
