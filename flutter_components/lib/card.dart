@@ -8,14 +8,16 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
 
-
+    Key key,
+    this.leading,
+    @required this.title,
+    this.gif,
+    this.backgroundColor,
     this.initiallyExpanded = false,
 	this.onExpansionChanged,
     this.children = const <Widget>[],
     this.trailing,
     this.color,
-
-
 	
   }) : assert(initiallyExpanded != null),
         super(key: key);
@@ -66,14 +68,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-    AnimationController _controller;
-    Animation<double> _iconTurns;
-	Animation<double> _heightFactor;
-    Animation<Color> _borderColor;
-    Animation<Color> _headerColor;
-    Animation<Color> _iconColor;
-    Animation<Color> _backgroundColor;
-	bool _isExpanded = false;
+
   
   @override
   void initState() {
