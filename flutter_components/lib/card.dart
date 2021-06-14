@@ -14,9 +14,10 @@ class ExpansionCard extends StatefulWidget {
     this.gif,
     this.backgroundColor,
     this.initiallyExpanded = false,
-
-
-
+	this.onExpansionChanged,
+    this.children = const <Widget>[],
+    this.trailing,
+    this.color,
 
 	
   }) : assert(initiallyExpanded != null),
@@ -45,6 +46,8 @@ class ExpansionCard extends StatefulWidget {
   /// The widgets that are displayed when the tile expands.
   /// Typically [ListTile] widgets.
   final List<Widget> children;
+
+
 
   /// A widget to display instead of a rotating arrow icon.
   final Widget trailing;
