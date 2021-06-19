@@ -5,12 +5,6 @@ import 'dart:async';
 
 void main() => runApp(new MyApp());
 
-
-
-
-
-
-
 class MyApp extends StatelessWidget 
 { 
   @override
@@ -146,7 +140,6 @@ class DetailPage extends StatelessWidget
     ));
   }
 }
-
 
 class User 
 {
