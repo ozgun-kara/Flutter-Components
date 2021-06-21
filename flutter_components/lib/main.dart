@@ -143,3 +143,14 @@ class DetailPage extends StatelessWidget
 
 
 
+class User 
+{
+
+
+
+  User(this.index, this.about, this.name, this.email, this.picture);
+}
+
+
+
+
