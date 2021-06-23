@@ -6,7 +6,6 @@ import 'dart:async';
 void main() => runApp(new MyApp());
 
 
-
 class MyApp extends StatelessWidget 
 { 
   @override
@@ -22,10 +21,6 @@ class MyApp extends StatelessWidget
     );
   }
 }
-
-
-
-
 
 
 class MyHomePage extends StatefulWidget 
@@ -135,8 +130,8 @@ class _MyHomePageState extends State<MyHomePage>
 
 class DetailPage extends StatelessWidget 
 {
-  final User user;
-  DetailPage(this.user);
+
+
 
   @override
   Widget build(BuildContext context) 
