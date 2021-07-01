@@ -13,13 +13,11 @@ class ExpansionCard extends StatefulWidget {
     this.children = const <Widget>[],
     this.trailing,
     this.color,
-
     Key key,
     this.leading,
     @required this.title,
     this.gif,
     this.backgroundColor,
-
 
   }) : assert(initiallyExpanded != null),
         super(key: key);
@@ -98,11 +96,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       _controller.value = 1.0;
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+
 
   void _handleTap() {
     setState(() {
