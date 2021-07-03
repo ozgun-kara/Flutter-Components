@@ -19,8 +19,6 @@ class ExpansionCard extends StatefulWidget {
     this.trailing,
     this.color,
 
-
-
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
