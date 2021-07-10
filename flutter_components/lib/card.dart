@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart';
-import 'package:flutter/material.dart';
+
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
@@ -12,6 +11,10 @@ class ExpansionCard extends StatefulWidget {
     this.leading,
     @required this.title,
     this.gif,
+	this.onExpansionChanged,
+    this.children = const <Widget>[],
+    this.trailing,
+    this.color,
     this.backgroundColor,
 	this.initiallyExpanded = false,
 
