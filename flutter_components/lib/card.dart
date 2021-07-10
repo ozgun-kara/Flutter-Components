@@ -1,4 +1,5 @@
-
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
@@ -74,9 +75,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 	Animation<double> _heightFactor;
     Animation<Color> _borderColor;
     Animation<Color> _headerColor;
-    AnimationController _controller;
-    Animation<double> _iconTurns;
-    Animation<Color> _iconColor;
+
     Animation<Color> _backgroundColor;
 	bool _isExpanded = false;
   
