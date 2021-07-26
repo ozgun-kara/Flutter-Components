@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget
   {
 	return new MaterialApp(
 	
-      title: 'Flutter Demo',
+     
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -149,7 +149,6 @@ class User
   final String picture;
   final String about;
   final String name;
-
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
