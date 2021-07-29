@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
+import 'package:http/http.dart' as http;
+import 'dart:async';
 
 void main() => runApp(new MyApp());
 
@@ -41,16 +42,7 @@ class _MyHomePageState extends State<MyHomePage>
     List<User> users = [];
 	
 
-		  for (var u in jsonData) 
-		  {
-			User user =
-			User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
-      
-			for (int i = 0; i < 50; i++)
-			{
-				users.add(user);
-			}
-		  }
+
 
     return users;
   }
