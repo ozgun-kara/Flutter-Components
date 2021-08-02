@@ -14,9 +14,10 @@ class ExpansionCard extends StatefulWidget {
     this.gif,
 	this.onExpansionChanged,
     this.children = const <Widget>[],
-
-
-
+    this.trailing,
+    this.color,
+    this.backgroundColor,
+	this.initiallyExpanded = false,
 
   }) : assert(initiallyExpanded != null),
         super(key: key);
@@ -46,7 +47,6 @@ class ExpansionCard extends StatefulWidget {
   final List<Widget> children;
 
 
-
   /// A widget to display instead of a rotating arrow icon.
   final Widget trailing;
 
@@ -74,10 +74,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     Animation<double> _iconTurns;
     Animation<Color> _iconColor;
 	Animation<double> _heightFactor;
-    Animation<Color> _borderColor;
-    Animation<Color> _headerColor;
-    Animation<Color> _backgroundColor;
-	bool _isExpanded = false;
+
   
   @override
   void initState() {
