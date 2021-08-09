@@ -131,7 +131,8 @@ class _MyHomePageState extends State<MyHomePage>
 
 class DetailPage extends StatelessWidget 
 {
-
+  final User user;
+  DetailPage(this.user);
 
   @override
   Widget build(BuildContext context) 
@@ -147,9 +148,7 @@ class User
 { 
   final int index;
   final String email;
-  final String about;
-  final String name;
-  final String picture;
+
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
