@@ -147,9 +147,9 @@ class User
 { 
   final int index;
   final String email;
-  final String picture;
   final String about;
   final String name;
+  final String picture;
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
