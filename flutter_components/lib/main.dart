@@ -135,8 +135,8 @@ class DetailPage extends StatelessWidget
 {
 
 
-
-
+  final User user;
+  DetailPage(this.user);
 
 
 
