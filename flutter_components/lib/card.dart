@@ -66,6 +66,10 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _backgroundColorTween = ColorTween();
 
 
+	Animation<Color> _borderColor;
+    Animation<Color> _headerColor;
+    Animation<Color> _backgroundColor;
+	bool _isExpanded = false;
 	Animation<double> _heightFactor;
     AnimationController _controller;
     Animation<double> _iconTurns;
