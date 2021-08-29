@@ -153,8 +153,6 @@ class User
 {   
 
   final int index;
-  
-  
   final String email;	
   final String picture;
   final String about;
