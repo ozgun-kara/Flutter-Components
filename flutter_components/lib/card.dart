@@ -10,15 +10,13 @@ class ExpansionCard extends StatefulWidget {
 
     Key key,
     this.leading,
-
-
     @required this.title,
     this.gif,
 	this.onExpansionChanged,
 
-
   }) : assert(initiallyExpanded != null),
         super(key: key);
+
 
   /// The primary content of the list item.
   ///
