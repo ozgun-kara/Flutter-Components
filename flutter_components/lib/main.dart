@@ -151,6 +151,9 @@ class DetailPage extends StatelessWidget
 
 class User 
 {   
+  final String about
+  final String name;
+  final int index;
   final String email;	
   final String picture;
 
