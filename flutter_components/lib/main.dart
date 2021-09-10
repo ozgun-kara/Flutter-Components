@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'dart:async';
+
 
 
 void main() => runApp(new MyApp());
@@ -156,8 +154,6 @@ class User
   final int index;
   final String email;	
   final String picture;
-
-
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
