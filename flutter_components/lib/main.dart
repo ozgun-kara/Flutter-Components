@@ -28,6 +28,8 @@ class MyHomePage extends StatefulWidget
 {
 
 
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -151,9 +153,7 @@ class User
 {   
   final String about
   final String name;
-  final int index;
-  final String email;	
-  final String picture;
+
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
