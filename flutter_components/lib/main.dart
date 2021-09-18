@@ -1,6 +1,5 @@
 import 'package:http/http.dart' as http;
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -151,7 +150,8 @@ class DetailPage extends StatelessWidget
 }
 
 class User 
-{     final int index;
+{     
+  final int index;
   final String email;	
   final String picture;
   final String about
