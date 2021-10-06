@@ -8,8 +8,6 @@ void main() => runApp(new MyApp());
 class MyHomePage extends StatefulWidget 
 {
 
-
-
 class MyApp extends StatelessWidget 
 { 
 
@@ -28,7 +26,6 @@ class MyApp extends StatelessWidget
   }
 
 }
-
 
 
   MyHomePage({Key key, this.title}) : super(key: key);
