@@ -6,9 +6,6 @@ const Duration _kExpand = Duration(milliseconds: 200);
 ///    <https://material.io/guidelines/components/lists-controls.html>.
 class ExpansionCard extends StatefulWidget {
 
-
-
-
  const ExpansionCard({
 
     Key key,
