@@ -13,8 +13,6 @@ class MyHomePage extends StatefulWidget
 class MyApp extends StatelessWidget 
 { 
 
-
-
    @override
   Widget build(BuildContext context) 
   {
@@ -30,10 +28,7 @@ class MyApp extends StatelessWidget
   }
 
 
-
-
 }
-
 
 
   MyHomePage({Key key, this.title}) : super(key: key);
