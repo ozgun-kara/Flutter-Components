@@ -1,7 +1,8 @@
 
+import 'package:flutter/material.dart';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:async';
-
 
 void main() => runApp(new MyApp());
 
@@ -26,7 +27,6 @@ class MyApp extends StatelessWidget
   }
 
 }
-
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
 
@@ -154,9 +154,7 @@ class User
 {    
   final int index;
   final String email;
-  final String picture;
-  final String about    
-  final String name;
+
 	
   User(this.index, this.about, this.name, this.email, this.picture);
 }
