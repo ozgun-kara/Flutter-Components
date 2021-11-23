@@ -2,12 +2,6 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'dart:async';import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'dart:async';import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'dart:async';
 
 void main() => runApp(new MyApp());
@@ -43,8 +37,6 @@ class MyApp extends StatelessWidget
 
 class _MyHomePageState extends State<MyHomePage> 
 {
-
-
 
   Future<List<User>> _getUsers() async 
   {
@@ -161,9 +153,7 @@ class User
 
   final String picture;
   final String about    
-  final String name;
-  final int index;
-  final String email;
+
 
 	
   User(this.index, this.about, this.name, this.email, this.picture);
