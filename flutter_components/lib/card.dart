@@ -69,21 +69,16 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
 	bool _isExpanded = false;
 	Animation<double> _heightFactor;
+	Animation<Color> _headerColor;
+	Animation<Color> _iconColor;
+	Animation<Color> _borderColor;
+    AnimationController _controller;
 	Animation<Color> _backgroundColor;
 	Animation<double> _iconTurns;
 
-
-
   @override
   void initState() {
-    super.initState();
-    _controller = AnimationController(duration: _kExpand, vsync: this);
-    _heightFactor = _controller.drive(_easeInTween);
-	_borderColor = _controller.drive(_borderColorTween.chain(_easeOutTween));
-    _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
-    _iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
-    _backgroundColor = _controller.drive(_backgroundColorTween.chain(_easeOutTween));
-    _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
+
 
 
     _isExpanded = PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
