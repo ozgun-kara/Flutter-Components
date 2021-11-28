@@ -1,6 +1,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 void main() => runApp(new MyApp());
 
 class MyHomePage extends StatefulWidget 
@@ -34,6 +44,8 @@ class MyApp extends StatelessWidget
 
 class _MyHomePageState extends State<MyHomePage> 
 {
+
+
 
   Future<List<User>> _getUsers() async 
   {
@@ -148,12 +160,13 @@ class DetailPage extends StatelessWidget
 class User 
 {    
 
+  final String picture;
+  final String about    
   final String name;
   final int index;
   final String email;
-  final String picture;
-  final String about    
 
+	
   User(this.index, this.about, this.name, this.email, this.picture);
 }
 
