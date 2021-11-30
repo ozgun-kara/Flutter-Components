@@ -40,26 +40,7 @@ class _MyHomePageState extends State<MyHomePage>
 
 
 
-  Future<List<User>> _getUsers() async 
-  {
-    var data = await http.get("http://www.json-generator.com/api/json/get/bQlOGsODVK?indent=2");
-    var jsonData = json.decode(data.body);
 
-    List<User> users = [];
-	
-		  for (var u in jsonData) 
-		  {
-			User user =
-			User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
-      
-			for (int i = 0; i < 50; i++)
-			{
-				users.add(user);
-			}
-		  }
-
-    return users;
-  }
 
   @override
   Widget build(BuildContext context) 
