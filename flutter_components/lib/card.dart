@@ -61,16 +61,12 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
   static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
   static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
+  final ColorTween _borderColorTween = ColorTween();
+  final ColorTween _headerColorTween = ColorTween();
+  final ColorTween _iconColorTween = ColorTween();
+  final ColorTween _backgroundColorTween = ColorTween();
 
 
-	bool _isExpanded = false;
-	Animation<double> _heightFactor;
-	Animation<Color> _headerColor;
-	Animation<Color> _iconColor;
-	Animation<Color> _borderColor;
-    AnimationController _controller;
-	Animation<Color> _backgroundColor;
-	Animation<double> _iconTurns;
 
   @override
   void initState() {
