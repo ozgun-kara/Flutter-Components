@@ -14,7 +14,6 @@ class ExpansionCard extends StatefulWidget {
     this.gif,
 	this.onExpansionChanged,
 
-
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
