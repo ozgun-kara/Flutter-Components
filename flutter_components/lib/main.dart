@@ -136,12 +136,21 @@ class DetailPage extends StatelessWidget
   final User user;
   DetailPage(this.user);
 
-
+  @override
+  Widget build(BuildContext context) 
+  {
+    return Scaffold(
+        appBar: AppBar(
+      title: Text(user.name),
+    ));
+  }
+  
 }
 
 
 class User 
 {    
+
   final String name;
   final int index;
   final String email;
