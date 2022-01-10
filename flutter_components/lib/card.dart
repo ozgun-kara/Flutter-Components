@@ -82,10 +82,11 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 	
     _controller = AnimationController(duration: _kExpand, vsync: this);
     _heightFactor = _controller.drive(_easeInTween);
+	_iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
+    _backgroundColor = _controller.drive(_backgroundColorTween.chain(_easeOutTween));
+    _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
 	_borderColor = _controller.drive(_borderColorTween.chain(_easeOutTween));
     _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
-
-
 
     _isExpanded = PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
     if (_isExpanded)
@@ -124,15 +125,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
         return Stack(children: <Widget>[
     
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30.0),
-            child: Align(
-              heightFactor: _heightFactor.value<0.5?0.5:_heightFactor.value,
-              child: Image.asset(
-                widget.gif,fit: BoxFit.cover,
-          ),
-        ),
-      ),
+
       Container(
 		decoration: BoxDecoration(
           color: _backgroundColor.value ?? Colors.transparent,
