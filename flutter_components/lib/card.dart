@@ -76,9 +76,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   Animation<double> _iconTurns;
   
 
-
-  
-
   @override
   void initState() {
     super.initState();
