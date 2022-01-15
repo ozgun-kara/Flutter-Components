@@ -29,7 +29,19 @@ class ExpansionCard extends StatefulWidget {
   final Widget leading;
 
 
+  /// Called when the tile expands or collapses.
+  /// When the tile starts expanding, this function is called with the value
+  /// true. When the tile starts collapsing, this function is called with
+  /// the value false.
 
+  final ValueChanged<bool> onExpansionChanged;
+
+  /// The color to display behind the sublist when expanded.
+  final Color backgroundColor;
+
+  /// The widgets that are displayed when the tile expands.
+  /// Typically [ListTile] widgets.
+  final List<Widget> children;
 
 
   /// A widget to display instead of a rotating arrow icon.
