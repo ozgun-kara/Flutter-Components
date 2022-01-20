@@ -28,8 +28,19 @@ class ExpansionCard extends StatefulWidget {
   /// Typically a [CircleAvatar] widget.
   final Widget leading;
 
+  /// Called when the tile expands or collapses.
+  /// When the tile starts expanding, this function is called with the value
+  /// true. When the tile starts collapsing, this function is called with
+  /// the value false.
 
+  final ValueChanged<bool> onExpansionChanged;
 
+  /// The color to display behind the sublist when expanded.
+  final Color backgroundColor;
+
+  /// The widgets that are displayed when the tile expands.
+  /// Typically [ListTile] widgets.
+  final List<Widget> children;
 
 
   /// A widget to display instead of a rotating arrow icon.
@@ -54,14 +65,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-  bool _isExpanded = false;
-  Animation<double> _heightFactor;
-  Animation<Color> _headerColor;
-  Animation<Color> _iconColor;
-  Animation<Color> _borderColor;
-    AnimationController _controller;
-  Animation<Color> _backgroundColor;
-  Animation<double> _iconTurns;
+
   
 
   @override
