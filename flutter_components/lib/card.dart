@@ -1,4 +1,5 @@
-
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
@@ -134,13 +135,10 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       ),
 
       Container(
-		decoration: BoxDecoration(
-          color: _backgroundColor.value ?? Colors.transparent,
-          border: Border(
-            top: BorderSide(color: borderSideColor),
-            bottom: BorderSide(color: borderSideColor),
-          ),
-        ),
+
+
+
+
 		
 		
         child: Column(
