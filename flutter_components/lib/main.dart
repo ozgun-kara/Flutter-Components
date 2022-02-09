@@ -1,6 +1,31 @@
 
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget 
+{ 
+
+   @override
+  Widget build(BuildContext context) 
+  {
+  return new MaterialApp(
+  
+   title: 'Flutter Demo',
+     
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new MyHomePage(title: 'Users'),
+    );
+  }
+
+
+}
 
 
 
@@ -130,11 +155,7 @@ class DetailPage extends StatelessWidget
 class User 
 {    
 
-  final String email;
-  final String picture;
-  final String about    
-  final String name;
-  final int index;
+
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
