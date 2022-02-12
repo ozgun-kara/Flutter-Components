@@ -196,6 +196,12 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
     final bool closed = !_isExpanded && _controller.isDismissed;
     
+	return AnimatedBuilder(
+      animation: _controller.view,
+      builder: _buildChildren,
+      child: closed ? null : Column(children: widget.children),
+    );
+
 
   }
 }
