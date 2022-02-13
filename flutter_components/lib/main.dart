@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget
 }
 
 
-
 class MyHomePage extends StatefulWidget 
 {
 
@@ -97,30 +96,12 @@ class _MyHomePageState extends State<MyHomePage>
                       color: Colors.black,
                     ),
                     itemBuilder: (BuildContext context, int index) {
-                      return ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage:
-                              NetworkImage(snapshot.data[index].picture),
-                        ),
-						
-                        title: Text(snapshot.data[index].name),
-                        subtitle: Text(snapshot.data[index].email),
-                        trailing: Text('${index + 1}',
-                            style: TextStyle(
-                                fontFamily: 'BlackOpsOne',
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500)),
-                        onTap: () 
-						{
-                          Navigator.push(
-                              context,
-                              new MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailPage(snapshot.data[index])));
-                        },
-						
-                      );
+
+
+
+
+
+
                     },
                   );
               	}
