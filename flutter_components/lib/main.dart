@@ -1,5 +1,8 @@
 
-
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 
 void main() => runApp(new MyApp());
@@ -100,6 +103,7 @@ class _MyHomePageState extends State<MyHomePage>
                               NetworkImage(snapshot.data[index].picture),
                         ),
 						
+
                         title: Text(snapshot.data[index].name),
                         subtitle: Text(snapshot.data[index].email),
                         trailing: Text('${index + 1}',
@@ -108,6 +112,9 @@ class _MyHomePageState extends State<MyHomePage>
                                 color: Colors.black,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500)),
+
+
+
                         onTap: () 
 						{
                           Navigator.push(
