@@ -92,10 +92,11 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       _controller.value = 1.0;
   }
 
-
-
-
-
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   void _handleTap() {
     setState(() {
