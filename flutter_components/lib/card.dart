@@ -8,9 +8,11 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
 
-
-
-
+    @required this.title,
+	this.onExpansionChanged,
+    Key key,
+    this.leading,
+    this.gif,
 
   }) : assert(initiallyExpanded != null),
         super(key: key);
@@ -65,13 +67,12 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
   bool _isExpanded = false;
   Animation<double> _iconTurns;
-  Animation<Color> _iconColor;
-  Animation<Color> _borderColor;
   AnimationController _controller;
   Animation<Color> _backgroundColor;
   Animation<double> _heightFactor;
   Animation<Color> _headerColor;
-
+  Animation<Color> _iconColor;
+  Animation<Color> _borderColor;
 
   @override
   void initState() {
