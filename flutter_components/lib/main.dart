@@ -22,8 +22,6 @@ class MyApp extends StatelessWidget
       home: new MyHomePage(title: 'Users'),
     );
   }
-  
-  
 
 }
 
