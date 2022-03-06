@@ -159,9 +159,7 @@ class User
 
   final String picture;
   final String about   
-  final String name;
-  final int index;
-  final String email;
+
 
   User(this.index, this.about, this.name, this.email, this.picture);
 }
