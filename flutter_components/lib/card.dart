@@ -10,9 +10,7 @@ class ExpansionCard extends StatefulWidget {
 
     @required this.title,
 	this.onExpansionChanged,
-    Key key,
-    this.leading,
-    this.gif,
+
 
   }) : assert(initiallyExpanded != null),
         super(key: key);
