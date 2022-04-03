@@ -114,14 +114,11 @@ class _MyHomePageState extends State<MyHomePage>
 
 
 
-                        onTap: () 
-						{
-                          Navigator.push(
-                              context,
-                              new MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailPage(snapshot.data[index])));
-                        },
+
+
+
+
+
 						
                       );
 
