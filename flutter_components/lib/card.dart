@@ -120,8 +120,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       widget.onExpansionChanged(_isExpanded);
   }
 
-
-
   Widget _buildChildren(BuildContext context, Widget child) {
     final Color borderSideColor =Colors.transparent;// _borderColor.value ??
 
@@ -179,6 +177,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     ],);
   }
 
+
   @override
   void didChangeDependencies() {
     final ThemeData theme = Theme.of(context);
@@ -194,6 +193,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       ..end = widget.backgroundColor;
     super.didChangeDependencies();
   }
+
 
   @override
   Widget build(BuildContext context) {
