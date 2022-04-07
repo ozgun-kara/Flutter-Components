@@ -1,8 +1,11 @@
 
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 
 void main() => runApp(new MyApp());
-
 
 class MyApp extends StatelessWidget 
 { 
@@ -108,18 +111,6 @@ class _MyHomePageState extends State<MyHomePage>
                                 color: Colors.black,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500)),
-
-
-                        onTap: () 
-						{
-                          Navigator.push(
-                              context,
-                              new MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailPage(snapshot.data[index])));
-                        },
-
-
 
 
 
