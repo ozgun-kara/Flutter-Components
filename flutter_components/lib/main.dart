@@ -112,9 +112,15 @@ class _MyHomePageState extends State<MyHomePage>
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500)),
 
-
-
-						
+                        onTap: () 
+						{
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (context) =>
+                                      DetailPage(snapshot.data[index])));
+                        },
+	
                       );
 
 
