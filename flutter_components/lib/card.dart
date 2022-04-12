@@ -20,10 +20,7 @@ class ExpansionCard extends StatefulWidget {
 
 
 
-  /// The primary content of the list item.
-  ///
-  /// Typically a [Text] widget.
-  final Widget title;
+
   
     final String gif;
   /// A widget to display before the title.
