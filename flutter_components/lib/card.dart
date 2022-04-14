@@ -8,16 +8,16 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
 
-
+    @required this.title,
+	Key key,
+	this.gif,
+	this.onExpansionChanged,
+    this.leading,
 
   }) : assert(initiallyExpanded != null),
         super(key: key);
 
-  /// The primary content of the list item.
-  ///
-  /// Typically a [Text] widget.
-  final Widget title;
-  
+
     final String gif;
   /// A widget to display before the title.
   ///
