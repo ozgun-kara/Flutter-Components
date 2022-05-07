@@ -146,33 +146,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
           ),
         ),
 
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ListTileTheme.merge(
-                iconColor: _iconColor.value,
-                textColor: _headerColor.value,
-                child: Container(margin: EdgeInsets.only(top: 55),
-                  child:ListTile(
-                    onTap: _handleTap,
-                    leading: widget.leading,
-                    title: widget.title,
-                    trailing: widget.trailing ?? RotationTransition(
-                      turns: _iconTurns,
-                      child: const Icon(Icons.expand_more),
-                    ),
-                  ),)
-            ),
-			
-            ClipRect(
-              child: Align(
-                heightFactor: _heightFactor.value,
-                child: child,
-              ),
-            ),
-
-          ],
-        ),		
+		
 
 
       )
