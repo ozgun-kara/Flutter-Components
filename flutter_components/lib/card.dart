@@ -146,7 +146,6 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
           ),
         ),
 
-
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -165,9 +164,12 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
                   ),)
             ),
 			
-
-
-
+            ClipRect(
+              child: Align(
+                heightFactor: _heightFactor.value,
+                child: child,
+              ),
+            ),
 
           ],
         ),		
