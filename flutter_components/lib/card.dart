@@ -68,7 +68,14 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-
+  bool _isExpanded = false;
+  Animation<Color> _backgroundColor;
+  Animation<Color> _iconColor;
+  Animation<double> _iconTurns;
+  AnimationController _controller;
+  Animation<Color> _borderColor; 
+  Animation<double> _heightFactor;
+  Animation<Color> _headerColor;
 
   @override
   void initState() {
@@ -158,12 +165,9 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
                   ),)
             ),
 			
-            ClipRect(
-              child: Align(
-                heightFactor: _heightFactor.value,
-                child: child,
-              ),
-            ),
+
+
+
 
           ],
         ),		
