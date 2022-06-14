@@ -22,11 +22,7 @@ class ExpansionCard extends StatefulWidget {
   final Widget title;
   
   
-    final String gif;
-  /// A widget to display before the title.
-  ///
-  /// Typically a [CircleAvatar] widget.
-  final Widget leading;
+
 
   /// Called when the tile expands or collapses.
   /// When the tile starts expanding, this function is called with the value
