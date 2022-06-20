@@ -14,7 +14,9 @@ environment:
   
   
 dependencies:
-
+  flutter:
+    sdk: flutter
+  http: ^0.12.2
   
   # The following adds the Cupertino Icons font to your application.
   cupertino_icons: ^1.0.0
@@ -42,11 +44,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For  
-  # example:
+
  
    fonts:
     - family: BlackOpsOne
