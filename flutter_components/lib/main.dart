@@ -1,10 +1,14 @@
-
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget 
 { 
-   @override
+  
+     @override
   Widget build(BuildContext context) 
   {
   return new MaterialApp(
@@ -40,16 +44,7 @@ class _MyHomePageState extends State<MyHomePage>
 
     List<User> users = [];
 	
-		  for (var u in jsonData) 
-		  {
-			User user =
-			User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
-      
-			for (int i = 0; i < 50; i++)
-			{
-				users.add(user);
-			}
-		  }
+
 
     return users;
   }
