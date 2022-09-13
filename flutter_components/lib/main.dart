@@ -24,7 +24,15 @@ class MyApp extends StatelessWidget
   
 }
 
+class MyHomePage extends StatefulWidget 
+{
 
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
 
 
 class _MyHomePageState extends State<MyHomePage> 
@@ -37,16 +45,7 @@ class _MyHomePageState extends State<MyHomePage>
 
     List<User> users = [];
 	
-		  for (var u in jsonData) 
-		  {
-			User user =
-			User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
-      
-			for (int i = 0; i < 50; i++)
-			{
-				users.add(user);
-			}
-		  }
+
 
     return users;
   }
