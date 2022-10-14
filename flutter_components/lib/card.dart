@@ -67,7 +67,14 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-
+  bool _isExpanded = false;
+  Animation<Color> _backgroundColor;
+  Animation<Color> _iconColor;
+  Animation<double> _iconTurns;
+  AnimationController _controller;
+  Animation<Color> _borderColor; 
+  Animation<double> _heightFactor;
+  Animation<Color> _headerColor;
 
   @override
   void initState() {
@@ -94,25 +101,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     super.dispose();
   }
 
-  void _handleTap() {
-    setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) {
-        _controller.forward();
-      } else {
-        _controller.reverse().then<void>((void value) {
-          if (!mounted)
-            return;
-          setState(() {
-            // Rebuild without widget.children.
-          });
-        });
-      }
-      PageStorage.of(context)?.writeState(context, _isExpanded);
-    });
-    if (widget.onExpansionChanged != null)
-      widget.onExpansionChanged(_isExpanded);
-  }
+
 
   Widget _buildChildren(BuildContext context, Widget child) {
     final Color borderSideColor =Colors.transparent;// _borderColor.value ??
