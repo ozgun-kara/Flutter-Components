@@ -1,4 +1,7 @@
-
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
 
@@ -149,16 +152,8 @@ class DetailPage extends StatelessWidget
   } 
 }
 
-class User 
-{    
-  final String about   
-  final String name;
-  final int index;
-  final String email;
-  final String picture;
 
-  User(this.index, this.about, this.name, this.email, this.picture);
-}
+
 
 
 
