@@ -178,20 +178,23 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     ],);
   }
 
-
-
   @override
-  Widget build(BuildContext context) {
-
-    final bool closed = !_isExpanded && _controller.isDismissed;
-    
-	return AnimatedBuilder(
-      animation: _controller.view,
-      builder: _buildChildren,
-      child: closed ? null : Column(children: widget.children),
-    );
-
+  void didChangeDependencies() {
+    final ThemeData theme = Theme.of(context);
+    _borderColorTween
+      ..end = theme.dividerColor;
+    _headerColorTween
+      ..begin = Colors.white
+      ..end = widget.color ?? Color(0xff60c9df);
+    _iconColorTween
+      ..begin = Colors.white
+      ..end = widget.color ?? Color(0xff60c9df);
+    _backgroundColorTween
+      ..end = widget.backgroundColor;
+    super.didChangeDependencies();
   }
+
+
 
 
 }
