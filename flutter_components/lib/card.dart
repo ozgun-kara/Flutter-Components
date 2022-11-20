@@ -59,7 +59,22 @@ class ExpansionCard extends StatefulWidget {
 
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
 
+  static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
+  static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
+  static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
+  final ColorTween _borderColorTween = ColorTween();
+  final ColorTween _headerColorTween = ColorTween();
+  final ColorTween _iconColorTween = ColorTween();
+  final ColorTween _backgroundColorTween = ColorTween();
 
+  bool _isExpanded = false;
+  Animation<Color> _backgroundColor;
+  Animation<Color> _iconColor;
+  Animation<double> _iconTurns;
+  AnimationController _controller;
+  Animation<Color> _borderColor; 
+  Animation<double> _heightFactor;
+  Animation<Color> _headerColor;
 
   @override
   void initState() {
@@ -87,25 +102,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
   }
 
 
-  void _handleTap() {
-    setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) {
-        _controller.forward();
-      } else {
-        _controller.reverse().then<void>((void value) {
-          if (!mounted)
-            return;
-          setState(() {
-            // Rebuild without widget.children.
-          });
-        });
-      }
-      PageStorage.of(context)?.writeState(context, _isExpanded);
-    });
-    if (widget.onExpansionChanged != null)
-      widget.onExpansionChanged(_isExpanded);
-  }
+
 
   Widget _buildChildren(BuildContext context, Widget child) {
     final Color borderSideColor =Colors.transparent;// _borderColor.value ??
