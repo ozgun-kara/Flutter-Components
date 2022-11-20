@@ -1,4 +1,9 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
+const Duration _kExpand = Duration(milliseconds: 200);
+
+///    <https://material.io/guidelines/components/lists-controls.html>.
 class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
@@ -54,22 +59,7 @@ class ExpansionCard extends StatefulWidget {
 
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
 
-  static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
-  static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
-  static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
-  final ColorTween _borderColorTween = ColorTween();
-  final ColorTween _headerColorTween = ColorTween();
-  final ColorTween _iconColorTween = ColorTween();
-  final ColorTween _backgroundColorTween = ColorTween();
 
-  bool _isExpanded = false;
-  Animation<Color> _backgroundColor;
-  Animation<Color> _iconColor;
-  Animation<double> _iconTurns;
-  AnimationController _controller;
-  Animation<Color> _borderColor; 
-  Animation<double> _heightFactor;
-  Animation<Color> _headerColor;
 
   @override
   void initState() {
