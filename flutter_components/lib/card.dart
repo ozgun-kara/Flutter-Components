@@ -8,7 +8,24 @@ class ExpansionCard extends StatefulWidget {
 
  const ExpansionCard({
 
+    @required this.title,
+  Key key,
+  this.leading, 
+  this.gif,
+  this.onExpansionChanged,
+  }) : assert(initiallyExpanded != null),
+        super(key: key);
 
+  /// The primary content of the list item.
+  ///
+  /// Typically a [Text] widget.
+  final Widget title;
+  
+      final String gif;
+  /// A widget to display before the title.
+  ///
+  /// Typically a [CircleAvatar] widget.
+  final Widget leading;
 
 
   /// Called when the tile expands or collapses.
@@ -42,13 +59,7 @@ class ExpansionCard extends StatefulWidget {
 
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
 
-  static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
-  static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
-  static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
-  final ColorTween _borderColorTween = ColorTween();
-  final ColorTween _headerColorTween = ColorTween();
-  final ColorTween _iconColorTween = ColorTween();
-  final ColorTween _backgroundColorTween = ColorTween();
+
 
   bool _isExpanded = false;
   Animation<Color> _backgroundColor;
