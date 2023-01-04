@@ -101,10 +101,25 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     super.dispose();
   }
 
-
-
-
-
+  void _handleTap() {
+    setState(() {
+      _isExpanded = !_isExpanded;
+      if (_isExpanded) {
+        _controller.forward();
+      } else {
+        _controller.reverse().then<void>((void value) {
+          if (!mounted)
+            return;
+          setState(() {
+            // Rebuild without widget.children.
+          });
+        });
+      }
+      PageStorage.of(context)?.writeState(context, _isExpanded);
+    });
+    if (widget.onExpansionChanged != null)
+      widget.onExpansionChanged(_isExpanded);
+  }
 
 
   Widget _buildChildren(BuildContext context, Widget child) {
@@ -163,21 +178,11 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     ],);
   }
 
-  @override
-  void didChangeDependencies() {
-    final ThemeData theme = Theme.of(context);
-    _borderColorTween
-      ..end = theme.dividerColor;
-    _headerColorTween
-      ..begin = Colors.white
-      ..end = widget.color ?? Color(0xff60c9df);
-    _iconColorTween
-      ..begin = Colors.white
-      ..end = widget.color ?? Color(0xff60c9df);
-    _backgroundColorTween
-      ..end = widget.backgroundColor;
-    super.didChangeDependencies();
-  }
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
