@@ -59,26 +59,24 @@ class ExpansionCard extends StatefulWidget {
 
 class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProviderStateMixin {
 
+  static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
+  static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
+  static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
+  final ColorTween _borderColorTween = ColorTween();
+  final ColorTween _headerColorTween = ColorTween();
+  final ColorTween _iconColorTween = ColorTween();
+  final ColorTween _backgroundColorTween = ColorTween();
+
+  bool _isExpanded = false;
+  Animation<Color> _backgroundColor;
+  Animation<Color> _iconColor;
+  Animation<double> _iconTurns;
+  AnimationController _controller;
+  Animation<Color> _borderColor; 
+  Animation<double> _heightFactor;
+  Animation<Color> _headerColor;
 
 
-  @override
-  void initState() {
-    super.initState();
-	
-    _controller = AnimationController(duration: _kExpand, vsync: this);
-    _heightFactor = _controller.drive(_easeInTween);
-  _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
-  _borderColor = _controller.drive(_borderColorTween.chain(_easeOutTween));
-    _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
-
-  _iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
-    _backgroundColor = _controller.drive(_backgroundColorTween.chain(_easeOutTween));
-
-    _isExpanded = PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
-    if (_isExpanded)
-      _controller.value = 1.0;
-
-  }
 
   @override
   void dispose() {
