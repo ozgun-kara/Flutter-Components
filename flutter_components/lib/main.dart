@@ -1,4 +1,7 @@
-
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
 
@@ -133,21 +136,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 }
 
-class DetailPage extends StatelessWidget 
-{
 
-  final User user;
-  DetailPage(this.user);
-
-  @override
-  Widget build(BuildContext context) 
-  {
-    return Scaffold(
-        appBar: AppBar(
-      title: Text(user.name),
-    ));
-  } 
-}
 
 
 class User 
