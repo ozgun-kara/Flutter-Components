@@ -195,18 +195,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     super.didChangeDependencies();
   }
 
-  @override
-  Widget build(BuildContext context) {
 
-    final bool closed = !_isExpanded && _controller.isDismissed;
-    
-  return AnimatedBuilder(
-      animation: _controller.view,
-      builder: _buildChildren,
-      child: closed ? null : Column(children: widget.children),
-    );
-
-  }
 
 
 }
