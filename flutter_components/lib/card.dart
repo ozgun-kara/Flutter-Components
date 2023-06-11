@@ -139,13 +139,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
       Container(
 
-    decoration: BoxDecoration(
-          color: _backgroundColor.value ?? Colors.transparent,
-          border: Border(
-            top: BorderSide(color: borderSideColor),
-            bottom: BorderSide(color: borderSideColor),
-          ),
-        ),
+
 
         child: Column(
           mainAxisSize: MainAxisSize.min,
