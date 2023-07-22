@@ -126,15 +126,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
 
         return Stack(children: <Widget>[
     
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30.0),
-            child: Align(
-              heightFactor: _heightFactor.value<0.5?0.5:_heightFactor.value,
-              child: Image.asset(
-                widget.gif,fit: BoxFit.cover,
-          ),
-        ),
-      ),
+
 
       Container(
 
@@ -194,7 +186,18 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
     super.didChangeDependencies();
   }
 
+  @override
+  Widget build(BuildContext context) {
 
+    final bool closed = !_isExpanded && _controller.isDismissed;
+    
+  return AnimatedBuilder(
+      animation: _controller.view,
+      builder: _buildChildren,
+      child: closed ? null : Column(children: widget.children),
+    );
+
+  }
 
 
 }
