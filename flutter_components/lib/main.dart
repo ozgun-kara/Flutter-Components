@@ -46,7 +46,16 @@ class _MyHomePageState extends State<MyHomePage>
 
     List<User> users = [];
   
-
+      for (var u in jsonData) 
+      {
+      User user =
+      User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
+      
+      for (int i = 0; i < 50; i++)
+      {
+        users.add(user);
+      }
+      }
 
     return users;
   }
@@ -146,17 +155,7 @@ class DetailPage extends StatelessWidget
 }
 
 
-class User 
-{    
 
-  final String about   
-  final String name;
-  final int index;
-  final String email;
-  final String picture;
-
-  User(this.index, this.about, this.name, this.email, this.picture);
-}
 
 
 
