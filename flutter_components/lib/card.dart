@@ -164,7 +164,12 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
                   ),)
             ),
       
-
+            ClipRect(
+              child: Align(
+                heightFactor: _heightFactor.value,
+                child: child,
+              ),
+            ),
 
           ],
         ),    
