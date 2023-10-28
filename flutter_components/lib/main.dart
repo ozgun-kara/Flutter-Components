@@ -137,15 +137,19 @@ class _MyHomePageState extends State<MyHomePage>
   }
 }
 
+class DetailPage extends StatelessWidget 
+{
 
+  final User user;
+  DetailPage(this.user);
 
-class User 
-{    
-  final String about   
-  final String name;
-  final int index;
-  final String email;
-  final String picture;
-
-  User(this.index, this.about, this.name, this.email, this.picture);
+  @override
+  Widget build(BuildContext context) 
+  {
+    return Scaffold(
+        appBar: AppBar(
+      title: Text(user.name),
+    ));
+  } 
 }
+
