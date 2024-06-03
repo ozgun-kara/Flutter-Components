@@ -123,62 +123,7 @@ class _ExpansionTileState extends State<ExpansionCard> with SingleTickerProvider
       widget.onExpansionChanged(_isExpanded);
   }
 
-  Widget _buildChildren(BuildContext context, Widget child) {
-    final Color borderSideColor =Colors.transparent;// _borderColor.value ??
 
-        return Stack(children: <Widget>[
-    
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30.0),
-            child: Align(
-              heightFactor: _heightFactor.value<0.5?0.5:_heightFactor.value,
-              child: Image.asset(
-                widget.gif,fit: BoxFit.cover,
-          ),
-        ),
-      ),
-
-      Container(
-
-    decoration: BoxDecoration(
-          color: _backgroundColor.value ?? Colors.transparent,
-          border: Border(
-            top: BorderSide(color: borderSideColor),
-            bottom: BorderSide(color: borderSideColor),
-          ),
-        ),
-
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ListTileTheme.merge(
-                iconColor: _iconColor.value,
-                textColor: _headerColor.value,
-                child: Container(margin: EdgeInsets.only(top: 55),
-                  child:ListTile(
-                    onTap: _handleTap,
-                    leading: widget.leading,
-                    title: widget.title,
-                    trailing: widget.trailing ?? RotationTransition(
-                      turns: _iconTurns,
-                      child: const Icon(Icons.expand_more),
-                    ),
-                  ),)
-            ),
-      
-            ClipRect(
-              child: Align(
-                heightFactor: _heightFactor.value,
-                child: child,
-              ),
-            ),
-
-          ],
-        ),    
-
-      )
-    ],);
-  }
 
 
   @override
